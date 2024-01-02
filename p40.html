@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOJS</title>
+</head>
+<body>
+    <center>
+        <h1>SUPER KEY</h1>
+    </center>
+    <hr>
+    //method overlodaing
+    <script>
+        class Company {
+            constructor(x,y){
+                this.empid = x;
+                this.empdes = y;
+            }
+            getempinfo(){
+                document.write(`<h1> Employee id = ${this.empid} & designation = ${this.empdes}</h1>`);
+            }
+        }
+        class emp extends Company{
+            constructor(na,em,id,de){
+                super(id,de);
+                this.name = na;
+                this.email = em;
+            }
+            getempinfo(){
+                super.getempinfo();
+                document.write(`<h1> Name is = ${this.name} & email = ${this.email}</h1>`);
+            } 
+        }
+        let x= new emp('john','john@gmail.com','3265','front end developer');
+        x.getempinfo();
+    </script>
+</body>
+</html>

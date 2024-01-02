@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOJS</title>
+</head>
+<body>
+    <center>
+        <h1>Object to array convertion</h1>
+    </center>
+    <hr>
+    <script>
+      var user = {
+        name: "john",
+        email:"john@gmail.com",
+        age:12
+      };
+
+        //keys method 
+      let result = Object.keys(user);
+      console.log("result =", result);
+
+      //using map method
+      let result1 = Object.keys(user).map(function(key){
+        return  user[key];//like user.name or user['name']
+      });
+      console.log("reult1 =", result1);
+    </script>
+</body>
+</html>

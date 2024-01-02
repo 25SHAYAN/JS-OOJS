@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOJS</title>
+</head>
+<body>
+    <center>
+        <h1>JAVASCRIPT OBJECT</h1>
+    </center>
+    <hr>
+    <ol>
+        <li>Literal type (single)
+            <ul>
+    <li>Object Literal</li>
+    <li>Creating instance of Object directly (using constructor method)</li>
+    <li>Using an object constructor (using constructor parameter)</li>
+</ul>
+</li>
+<li>Object Array</li>
+<li>JSON(Javascript object Notation) Array (Responsive of REST[Representationl state transfer]) API </li>
+    </ol>
+    <script>
+        let empdetails = "fyfyyggugu";//string type of an object
+        alert(typeof(empdetails));//literal type of object
+
+        let empdet = new String();
+        alert(typeof empdet);//returns alert as object ,object type is string
+
+        
+        let empdet1 = new String("thhhhhhhhh");
+        alert(typeof empdet1);
+
+        
+        let empdet2 = [];
+        alert(typeof empdet2);//literal type of array object
+
+        
+       // let empdet3 = new Array[ ];
+       // alert(typeof empdet3);//using constructor method
+       
+         
+        let empdet4 = new Array["A","B"];
+        alert(typeof empdet4);//using constructor parameter
+        
+
+    </script>
+    <hr>
+    <hr>
+
+    <center>
+        <h1>LITERAL OBJECT</h1>
+        <p>key: value => property of an object</p>
+    </center>
+    <p><strong>SYNTAX :</strong></p>
+    <pre>
+        let literalObjectName = {
+            "key1":"value1",
+            "key2":"value2",
+            "key3":"value3",
+            "key4":"value4",
+        };
+
+        console.log(literalObjectName);
+        console.log(typeof(literalObjectName));
+        console.log(literalObjectName.key1);//dispalys key value
+    </pre>
+
+    <script>
+        let test = "hello";
+        document.write(`<h3>Typeof test = ${typeof(test)}</h3>`);
+        document.write(`<h3>test = ${test}</h3>`);
+
+        let car = {
+             //key : value => property of an object
+             'model' :2023,
+             "color" :'red',
+             'brand' :"ETIOS",    //diff value types , number,string,boolean
+             'company':'toyota',
+           'isRunnable': true,
+        };
+        document.write(`<h3>car = ${car}</h3>`);
+        document.write(`<h3>car Typeof= ${typeof car}</h3>`);
+        document.write(`<h3>car model = ${car.model}</h3>`);
+        document.write(`<h3>car color= ${car.color}</h3>`);
+        document.write(`<h3>car  brand= ${car.brand}</h3>`);
+        document.write(`<h3>car company = ${car.company}</h3>`);
+        document.write(`<h3>car isrunnable = ${car.isRunnable}</h3>`);
+        //another way
+        document.write(`<h3>car color = ${car['color']}</h3>`);
+    </script>
+</body>
+</html>

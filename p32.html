@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Even or Odd Checker</title>
+</head>
+<body>
+<center>
+  <h1>FINDING EVEN OR NOT USING CLASS</h1>
+</center>
+<div class="container">
+ 
+    <label for="number">ENTER THE NUMBER:</label>
+    <input type="number" name="num" id="num"><br>
+    <button type="button" id="submit" value="submit">Submit</button>
+    <h3 id="result"></h3>
+
+</div>
+
+ <hr>
+ <script>
+const submit = document.getElementById('submit');
+submit.addEventListener('click',function(){
+  class calculate{
+    constructor(){
+      var number = Number(document.getElementById('num').value);
+      var result = document.getElementById('result');
+      if(number>0){
+        if(number %2 == 0){
+          result.innerHTML = number + "is Even";
+        }
+        else{
+          result.innerHTML = number + "is odd";
+        }
+      }
+        else{
+           result.innerHTML= "number should be greater than zero";
+        }
+      }
+    }
+  
+})
+ </script>
+
+  
+
+</body>
+</html>

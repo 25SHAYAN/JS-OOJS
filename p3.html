@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOJS</title>
+</head>
+<body>
+    <center>
+        <h1>By creating instance of object directly (using new keyword)</h1>
+    </center>
+    <hr>
+    <p><strong>SYNTAX :</strong></p>
+    <pre>
+      let objectname = new consructormethod();
+    </pre>
+    <script>
+        //constructor type
+        let empdetails = new Object();//built in method
+        console.log(typeof(empdetails));
+
+        //here wedeclear key value like this
+
+        empdetails.firstname = "shayan";
+        empdetails.lastname = "rao";
+        empdetails.fullname = function(){return this.firstname + " " + this.lastname}
+        
+        document.write(empdetails.firstname +"<br>");
+        document.write(empdetails.lastname +"<br>");
+        document.write(empdetails.fullname ()+"<br>");
+    </script>
+</body>
+</html>

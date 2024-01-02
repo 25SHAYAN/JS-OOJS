@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOJS</title>
+</head>
+<body>
+    <center>
+        <h1>GET AND SET METHOD</h1>
+    </center>
+    <hr>
+    
+    <script>
+        class Car{
+            constructor(){
+                this.title;  //constructor property,will not used to call
+                //or 
+                
+                //let title;  it also works same for this also
+
+            }
+            //we are calling constructor property using getter and setter method
+            get title(){
+                return `My car name is = ${this._name}`;//_name => alias(duplicate to title ) property to title underscore is alias 
+            }
+            //set to assign the value
+            set title(tt){
+                this._name = tt;
+            }
+        }
+        let car = new Car();
+        car.title = "Mahindra Thar";
+        document.write(`<h1>${car.title}</h1>`);
+
+        //the title const property value we are assigning value to allias i.e, this.name in set and we aare dispalying through get
+        //then why parameter tt? because the syntax like that only
+    </script>
+</body>
+</html>

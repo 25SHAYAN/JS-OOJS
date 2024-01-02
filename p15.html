@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOJS</title>
+</head>
+<body>
+    <center>
+        <h1>write protect the values</h1>
+    </center>
+    <script>
+        var user = {
+            email: "shayan@gmail.com"
+        };
+
+        Object.defineProperty(user,'name',{
+            value:'Shayan',
+            writable:false  //true -> writable,false -> readable(write protect) (default)
+            //writable : true; it prints shayan and sony
+        });
+        console.log( 'Before=',user);
+        console.log(user.name);
+
+      //  user.name ="sony"; dispalys shayan only so we fallow below mwehod
+  
+  user.name = 'sony';
+        console.log('After',user);
+        console.log(user.name);
+
+    </script>
+</body>
+</html>

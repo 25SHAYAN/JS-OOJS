@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOJS</title>
+</head>
+<body>
+    <center>
+        <h1>JAVASCRIPT POLYMORPHISM.....</h1>
+        <p>IT PROVIDES A WAY TO PERFORM A SINGLE ACTION IN DIFFERENT FORMS.IT PROVIDES AN ABILITY TO CALL THE SAME METHOD ON DIFFERENT JS OBJECTS.</p>
+    </center>
+    <hr>
+    <h3>Javascript Polymorphism Example1....!</h3>
+    <script>
+        class A{
+            constructor(){}
+                Display(){
+                    document.write("THIS IS A CLASS...");
+                }
+            }
+            
+            class B extends A{
+            constructor(){
+                super();
+            }
+                Display(){
+                    document.write("THIS IS B CLASS...");
+                }
+            }
+        let b = new B();
+        b.Display();
+    </script>
+<hr>
+<h3>Javascript Polymorphism Example2....!</h3>
+<script>
+         class C{
+            constructor(){}
+                Display(){
+                    document.write("THIS IS C CLASS...");
+                }
+            }
+            
+            class D extends C{
+            constructor(){
+                super();
+            }
+                Display(){
+                    document.write("THIS IS D CLASS...");
+                }
+            }
+            //we created seperate object for class cand d
+        let c = new C();
+        c.Display(); 
+
+        let d = new D();
+        d.Display();
+
+        //commom object for parent and child
+        let e =  [new C(),new D()];//we use aaray
+        console.log(e);
+        console.log(typeof(e));
+
+         e.forEach(mes=>{
+            mes.Display();
+         });
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOJS</title>
+</head>
+<body>
+    <center>
+        <h1>Entries to Object conversion</h1>
+    </center>
+    <script>
+        const userentry = [['name','jonny'],['email','jonny@gmail.com'],['age',33]];
+        console.log('userentry',userentry);
+
+        //convert entries into object
+
+        const userobject = Object.fromEntries(userentry);
+        console.log('userobject :',userobject);
+
+    </script>
+</body>
+</html>

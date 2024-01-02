@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOJS</title>
+</head>
+<body>
+    <center>
+        <h1>JAVASCRIPT INHERITANCE</h1>
+        <p>JS INHERITANCE IS A MECHANISUM THAT ALLOWS US TO CREATE NEW CLASSES ON THE BASIS OF ALREADY EXISTING CLASSES. </p>
+      <p>THE JS <b>EXTENDS </b> KEYWORD IS USED TO CREATE A CHILD CLASS ON THE BASIS OF A PARENT CLASS.</p>
+      <p>IT MAINTAINS  AN IS-A RELATIONSHIP</p>
+    </center>
+    <hr>
+    <h3>EXAMPLE -1</h3>
+    <script>
+        class moment extends Date{
+            constructor(){
+               super();
+
+            }
+        }
+        let Moment = new moment();
+        document.write(`<p>current Date is : ${Moment.getDate()}</p>`);
+        document.write(`<p>current Month is : ${Moment.getMonth()}</p>`);//month statrs from 0 here 
+        document.write(`<p>current Year is : ${Moment.getFullYear()}</p>`);
+    </script>
+    <hr>
+    <h3>EXAMPLE-2</h3>
+    <script>
+        class Bike{
+            constructor(){
+                this.bikename = "SP125";
+            }
+        }
+
+//here we usee inheritance
+        class vehicle extends Bike{
+            constructor(name,price){//parametrized consrtuctor
+                super();
+                this.name1 = name;
+                this.price1 = price;
+            }
+        }
+        let Vehicle = new vehicle('activa',100000);
+        
+        document.write(`<p>vehicle name is : ${Vehicle.name1}</p>`);
+           
+        document.write(`<p>vehicle price is : ${Vehicle.price1}</p>`);
+                 
+        document.write(`<p>Bike name is : ${Vehicle.bikename}</p>`);
+    </script>
+</body>
+</html>

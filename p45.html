@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOJS</title>
+</head>
+<body>
+    <center>
+        <h1>
+            Getter and Setter
+        </h1>
+    </center>
+    <hr>
+    <script>
+        class Card{
+            constructor(){
+                let number;
+            }
+            set cardNum(val){
+                this.number= val;
+            }
+            get cardNum(){
+                return this.number;
+            }
+        }
+        let x = new Card();
+        console.log('x=',x);
+        //x.setcardNum('hh'); if their is no gap b/w get and set we use this
+        x.cardNum = "0033 5555 8888";
+        document.write(`<h1>First card = ${x.cardNum}</h1>`);
+    </script>
+    
+</body>
+</html>

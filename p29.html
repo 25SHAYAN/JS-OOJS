@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOJS</title>
+</head>
+<body>
+    <center>
+        <h1>CLASS ES-6</h1>
+    </center>
+    <hr>
+    <script>
+        //class => group of objects
+        // objects => group of state (variables) and behaviours (methods)
+
+        class User{
+            constructor(){
+                this.name = "mohan";
+                this.email = "mohan@gmail.com";
+                this.age = 123;
+                this.isAdmin = true;
+                this.hobbies = ['trekking', 'cycling', 'riding'];
+                this.account = { 
+                    bank:"RBI",
+                    accNo:12345
+                }
+            }
+          getUserInfo(){
+            //getinfouser is a method comes under class x
+            return this.name;
+          }  
+          getEmail(){
+            document.write(`<h3>my email is = ${this.email}</h3>`);
+          }
+        }
+        let x = new User();
+        console.log("x =",x);
+        document.write(`<h3> name = ${x.name}</h3>`);
+        document.write(`<h3> email = ${x.email}</h3>`);
+        document.write(`<h3>age = ${x.age}</h3>`);
+        document.write(`<h3>isAdmin = ${x.isAdmin}</h3>`);
+
+        document.write(`<h1> method getUserInfo = ${x.getUserInfo()}</h1>`);
+
+          document.write(`<h3>my email is = ${this.email}</h3>`);
+
+          x.getEmail();
+          document.write(`<h3>x.hobbies : ${x.getUserInfo()}</h3>`);//since it is objecct type it doesnt support for loop so we use forin or foroff
+for (const iterator of x.hobbies) {
+    document.write(iterator);//extra know
+}
+
+
+          //to traverse into array we use foreach we can also use map
+          x.hobbies.forEach(function(item,index){
+            document.write(`<p> ${index} ${item}</p>`);
+            //if we want only array value we use index only if we want array value with number we use index,item
+            //  x.hobbies.forEach(function(index)for value
+          });
+          //to display account objects and object type is key
+          document.write(`<h1>Bank Name = ${x.account.bank}</h1>`);
+          document.write(`<h1>Account Number= ${x.account.accNo}</h1>`);
+    </script>
+</body>
+</html>

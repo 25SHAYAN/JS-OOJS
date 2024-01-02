@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOJS</title>
+</head>
+<body>
+    <center>
+        <h1>PROTOTYPE</h1>
+    </center>
+    <hr>
+    <script>
+        function user(){
+            //we have 2 constructor type property here
+            this.name = "Manu";//constru type is string
+            this.getName = function(){
+                //construct type is fun
+                document.write(`<h3>my name is  ${this.name}</h3>   `);
+            }
+        }
+        let x = new user();
+        console.log('user instance = ',x);
+
+        //constructor.prototype.property = value;
+
+        user.prototype.email = "manu@gmail.com";
+        //we are inserting the external property into the function
+        user.prototype.getEmail = () => {
+        document.write(`<h3>email= ${x.email}</h3>   `);
+        };
+
+        document.write(`<h3>my name is =  ${x.name}</h3>   `);
+        document.write(`<h3>my emaii is= ${x.email}</h3>   <br>`);
+
+         //to display constuctor function(2 funcs here)
+         document.write(`<h3>my name  =  ${x.name}</h3>   `);
+        document.write(`<h3>my emaii = ${x.email}</h3>  <br> `);
+        x.getName();
+        x.getEmail();
+
+    </script>
+</body>
+</html>

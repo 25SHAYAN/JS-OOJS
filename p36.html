@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOJS</title>
+</head>
+<body>
+    <center>
+        <h1>JAVASCRIPT CONSTRUCTOR METHOD</h1>
+        <p>THIS IS SPECIAL TYPE OF METHOD WHICH IS USED TO INITIALIZE AND CREATE AN OBJECT.</p>
+    </center>
+    <hr>
+
+    <p >...........Points to remember.............</p>
+    <ul>
+        <li>Constructor key word is used to declear a constructor method.</li>
+        <li>The class can contain one constructor method only</li>
+        <li>Parent class constructor through super keyword</li>
+    </ul>
+    <hr>
+    <h3>CONSTRUCTOR METHOD EXAMPLE 1...!</h3>
+    <script>
+       class employee{
+        constructor(){
+            this.id = 1;
+            this.name = "BE-PRACTICAL TECH SOLUTIONS....!";
+
+        }
+       } 
+       var emp = new employee();
+       document.write(emp.id + " " + emp.name);
+    </script>
+
+    <h3>CONSTRUCTOR METHOD EXAMPLE 2 WITH SUPER KEYWORD...!</h3>
+    <script>
+        //parent class
+        class companyname {
+            constructor(){
+                this.company = "BE-PRACTICAL TECH SOLUTIONS....!"
+            }
+        }
+        //the above class property we are calling inside this class called inheritence
+
+        //child class
+        class employeecompany extends companyname{
+            constructor(id,name){
+                super();
+                this.id1 = id;
+                this.name1 = name;
+                this.company1 = this.company;
+
+            }
+        }
+        let Employeecompany = new employeecompany(33,'manoj');
+
+        document.write(`
+        <p> Emplyoee ID : ${Employeecompany.id1}</p> <p>emplyoee name: ${Employeecompany.name1}</p>
+         <p>Emplyoee Company is : ${Employeecompany.company1}</p>`);
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOJS</title>
+</head>
+<body>
+    <center>
+        <h1>Function,arrays and objects as properties</h1>
+    </center>
+    <hr>
+    <script>
+        let user = {
+        'name':"Shayan",
+        'email':'nagashayan@gmail.com',
+        'hobbies' : ['cycling','driving','riding'],
+        'getname' : function(){
+            //function defining
+           // document.write(`<h3>My Name is: ${this.name}</h3>`);it will show undefiend
+           return this.name;
+        },
+        "getemail" : () =>{
+            //this pointer is not accesable inside arrow function (function expression)
+           document.write(`<h3>My email is: ${this.email}</h3>`);
+          return this.email;
+          //dont use arrow it doesnt support this keyword in fun
+        },
+         'address' :{
+            'city' : "Bengaluru",
+            'pincode' : 563738
+      
+
+            //go to console give user and get output
+          //  next give user.name
+         },
+          getAddress : function (){
+            return this.address.city + ', pin =' + this.address.pincode;
+          }
+
+        };
+        document.write(`<h3> object = ${user.name}</h3>`);
+
+      document.write(`<h3> hobbies = ${user['hobbies']}</h3>`);
+
+        user.getname();
+        user.getemail();
+
+        document.write(`<h3> address city = ${user.address}</h3>`);
+        document.write(`<h3> address zip = ${user['address']['pincode']}</h3>`);
+        document.write(`<h3> address = ${user.getAddress()}</h3>`);
+    </script>
+</body>
+</html>

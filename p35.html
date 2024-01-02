@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOJS</title>
+</head>
+<body>
+    <center>
+        <h1>STATIC METHOD</h1>
+    </center>
+    <hr>
+    <!-- <h3>static method inside class</h3> -->
+<script>
+class course{
+    constructor(title,dur){
+        document.write(`<h3> constructor called</h3>`);
+        this.title = title;
+        this.duration = dur;//the values(js,1mon)is passed to parameters and this is passed to values title,dration
+    }
+    //static method
+    static print(val){
+        //will not allow this pointer
+        //static functions call possible only by class name
+        document.write(`<h1> this is static method</h1>`);
+        document.write(`<h1>${val}</h1>`);
+
+        
+    }
+//non static method
+courseinfo(){
+    document.write(`<h1>${this.title} ${this.duration} </h1>`);
+}
+}
+let x =new course(`javascript`,`1month`);
+course.print("be-practical");//if non static use class name
+x.courseinfo();//for non static method object followed by non static method
+</script>
+</body>
+</html>

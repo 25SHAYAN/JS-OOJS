@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOJS</title>
+</head>
+<body>
+    <center>
+        <h1>Prototype</h1>
+        <p>Prototype keyword - is used to create a property to an constructor externally</p>
+    </center>
+    <hr>
+    <script>
+    function student(){
+        //Local Property
+        let name,gender;
+
+        //Constructor Property
+        this.name ="ABD";
+        this.gender = "Male";
+
+    }
+   // student(); for local
+    let stud = new student();//constructor object
+
+    document.write("<b>stud.name = </b>" + stud.name +"<br><br>");
+    document.write("<b>stud.gender = </b>" + stud.gender +"<br><br>");
+
+    stud.age = 21;//this property only belong to object not for function
+    document.write("<b>stud.age = </b>" + stud.age+"<br><br>");
+
+    //creating a another object
+    let stud1 = new student();
+    
+    document.write("<b>stud1.name = </b>" + stud1.name +"<br><br>");
+    document.write("<b>stud1.gender = </b>" + stud1.gender +"<br><br>");
+    document.write("<b>stud1.age = </b>" + stud1.age+"<br><br>");//because age belongs to stud not for function
+
+    student.prototype.age1 = 30;
+    //since prototype property belongs to fun we declear new objects to check it belongs to fun to all or not
+    let stud2 = new student();
+    
+    document.write("<b>stud2.age1 = </b>" + stud2.age1 +"<br><br>");
+
+    let stud3 = new student();
+    
+    document.write("<b>stud3.age1 = </b>" + stud3.age1+"<br><br>");
+</script>
+</body>
+</html>

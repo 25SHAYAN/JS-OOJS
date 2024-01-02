@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOJS</title>
+</head>
+<body>
+<center>
+    <h1>By using an object constructor (constructor parameter)</h1>
+</center>
+<h3>Example-1</h3>
+<script>
+    //parameterized constructor type
+    let empdetails1 = new Object({
+        fname:"Naga",
+        lname:"Shayan",
+        fullname:function(){return this.fname +" "+ this.lname
+    }});
+    
+    document.write(typeof empdetails1+"<br>");
+    document.write(empdetails1.fname +"<br>");
+    document.write(empdetails1.lname +"<br>");
+    document.write(empdetails1.fullname() +"</br>");
+    </script>
+<hr>
+    <h3>Example-2</h3>
+    <script>
+        function studdetails(firstname,lastname){
+         document.write(`firstname =` ,firstname);
+         document.write(`lastname =`,lastname);
+         
+         document.write(`<br>`);
+        let fn,ln,fullname;
+         //fn = firstname;it will give direct o/p
+         this.fn = firstname;//  it will display undefined,we assign value of parameters,if we use this then we should create (stud here)outside
+         this.ln = lastname;
+         this.fullname = fn + " " +ln;
+         document.write(`fn =` ,fn);
+         document.write(`ln =` ,ln);
+         document.write("<br>",fullname);
+        }
+       let stud = new studdetails("HTML","HTML-5");
+       document.write("<br>",typeof(stud));
+
+       document.write("<br>",`this.fn =`,stud.fn);
+       document.write("<br>",`this.ln =`,stud.ln);
+       //to display fn,ln values we will create object
+    </script>
+</body>
+</html>
